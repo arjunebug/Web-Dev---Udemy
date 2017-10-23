@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <title>Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+	<button id="textChanger">Change first div text</button>
+
+	<div id="FirstDiv">This is some text</div>
+	<button id="textAppender">Append some stuff</button>
+
+	<div id="2ndDiv">Javascript is...</div>
+
+	<button id="textCreator">I CREATE AND DESTROY WORLDS ANEW</button>
+	<div id="EmptyDiv"></div>
+
+	<script type="text/javascript">
+		document.getElementById("textChanger").onclick=function() {
+			document.getElementById("FirstDiv").innerHTML="This is awesome!";
+		}
+	</script>
+
+	<script type="text/javascript">
+		document.getElementById("textAppender").onclick=function() {
+			document.getElementById("2ndDiv").innerHTML=document.getElementById("2ndDiv").innerHTML + "great!";
+		}
+	</script>
+
+	<script type="text/javascript">
+		document.getElementById("textCreator").onclick=function() {
+			document.getElementById("EmptyDiv").innerHTML="HAHAHAHAHA LIFE IS TEXT";
+		}
+	</script>
+</body>
+</html>
