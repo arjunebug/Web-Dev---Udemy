@@ -6,13 +6,30 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+	<style>
+	
+	#circle {
+		border-radius: 50%;
+		background-color: red;
+		height: 50px;
+		width: 50px;
+
+	}
+
+
+
+	</style>
+
 </head>
 
-	<button id="myButton">You know you want to click me...</button>
+	<div id="circle"></div>
 
 	<script type="text/javascript">
-		document.getElementById("myButton").onclick=function() {
-			alert("Hi!")
+		document.getElementById("circle").onclick=function() {
+			document.getElementById("circle").style.display="none";
+
 		}
 	</script>
 

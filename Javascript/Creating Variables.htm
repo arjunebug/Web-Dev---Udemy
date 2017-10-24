@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+	
+	<input id="myInput" type="text" value="test" />
+
+	<button id="textChanger">Add your own text</button>
+
+	<div id="FirstDiv">This is some text</div>
+
+
+
+	<script type="text/javascript">
+
+		document.getElementById("textChanger").onclick=function() {
+			var newText=document.getElementById("myInput").value;
+			document.getElementById("FirstDiv").innerHTML=newText;
+		}
+	</script>
+
+</body>
+</html>

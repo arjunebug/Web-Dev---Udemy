@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <title>Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+
+	<button id="textChanger">Change your own text</button>
+
+	<div id="FirstDiv">This is some text</div>
+
+
+
+	<script type="text/javascript">
+
+		var myArray = new Array();
+
+		myArray[0]="pizza";
+		myArray[1]="chocolate";
+
+		console.log(myArray);
+
+		my0therArray=["rain","sunshine"];
+
+		console.log(my0therArray);
+
+		my0therArray.push("snow");
+
+		my0therArray.splice(1, 2);
+
+		console.log(my0therArray,length);
+
+		my0therArray(1, 0, "hail","cloudy");
+
+		document.getElementById("textChanger").onclick=function() {
+		
+			document.getElementById("FirstDiv").innerHTML=myArray[0];
+		}
+	</script>
+
+</body>
+</html>
