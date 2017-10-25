@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+    <title>Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<style type="text/css">
+	
+	#box {
+
+	height:50px;
+	width: 50px;
+	background-color:red;
+	display:none;
+
+	}
+
+</style>
+
+<body>
+
+	<p>Your time: <span id="time"></span></p>
+
+	<div id="box"></div>
+
+	<script type="text/javascript"> 
+
+	var clickedTime; 	var createdTime; var reactionTime;
+
+	var colorArray= ["red", "green", "blue"];	var radius=["50%", "100%"];
+
+	function getRandomColor() {
+ 			var letters = '0123456789ABCDEF';
+  			var color = '#';
+  				for (var i = 0; i < 6; i++) {
+    				color += letters[Math.floor(Math.random() * 16)];
+ 				 }
+			 return color;
+	}
+
+	function random() {
+
+
+
+	}
+
+	function makeBox() {
+
+
+		var time=Math.random();
+
+		time = 5000 * time;
+
+		setTimeout(function() {
+
+			if (Math.random()>0.5){
+				document.getElementById("box").style.borderRadius="100%";
+
+			}	else {
+
+				document.getElementById("box").style.borderRadius="none";
+			}
+
+			
+			document.getElementById("box").style.backgroundColor=getRandomColor();
+			document.getElementById("box").style.display="block";
+			createdTime=Date.now();
+
+		}, time)
+
+	}
+
+	/*function makeCircle(){
+
+		var time=Math.random();
+
+		time = 5000 * time;
+
+		setTimeout(function() {
+
+		document.getElementById("box").style.border-radius="50%";
+		createdTime=Date.now();
+
+		}, time)
+
+	}
+	*/
+
+	makeBox();
+
+	document.getElementById("box").onclick=function(){
+
+			clickedTime=Date.now();
+			reactionTime=(clickedTime - createdTime)/1000;
+			document.getElementById("time").innerHTML=reactionTime;
+			this.style.display="none";
+			makeBox();
+
+	}
+
+
+	
+
+	</script>
+
+</body>
+</html>
